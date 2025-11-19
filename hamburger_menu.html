@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AI revolution</title>
+        <style>
+            body{
+                margin:0;
+                font-family:arial,sans-serif;
+                background-color:#0e0e10;
+                color:#e0e0e0;
+                line-height:1.6;
+
+            }
+            header{
+                background:linear-gradient(90deg, #3a0ca3, #4361ee, #4cc9f0);
+                padding:12px 20px;
+                position:sticky;
+                top:0;
+                z-index:999;
+            }
+            .navbar{
+                display:  flex;
+                justify-content:space-between;
+                align-items:center;
+                flex-wrap:wrap;
+                max-width:1100px;
+                margin:auto;
+            }
+
+            .logo{
+                font-size:1.6rem;
+                font-weight:500;
+                color:white;
+                letter-spacing:1px;
+
+            }
+            /*Nav links*/
+            .nav-links{
+                list-style:none;
+                display: flex;
+                gap:25px;
+                transition:all 0.4s ease;
+            }
+            .nav-links a{
+                text-decoration:none;
+                color:#fff;
+                font-weight:500;
+            }
+            .nav-links a:hover{
+                color:#4cc9f0;
+            }
+
+            /*hamburger menu*/
+
+            .hamburger{
+                display:none;
+                flex-direction:column;
+                cursor:pointer;
+                gap:4px;
+            }
+            .hamburger span{
+                width:25px;
+                height:3px;
+                background-color:white;
+                border-radius:5px;
+                transition:all 0.3s ease;
+            }
+            .main{
+                text-align:center;
+                padding:80px 20px;
+                background:radial-gradient(circle at top, #1a1a1a 0%, #0e0e10 100%);
+            }
+            .main h1{
+                color:#4cc9f0;
+                font-size:2.5rem;
+                margin-bottom:10px;
+            }
+            .main p{
+                color:#bbb;
+                font-size:1rem;
+                max-width:700px;
+                margin: 0 auto;
+
+            }
+             .card{
+                background-color:#1b1b1e;
+                border-radius:12px;
+                overflow:hidden;
+                box-shadow:0 0 10px rgb(76, 201, 240, 0.1);
+                transition:all 0.3s ease;
+                display:flex;
+                flex-direction:column;
+             }
+             .card-section{
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+                gap:20px;
+                padding:40px 20px;
+                max-width:1100px;
+                margin:auto;
+             }
+             .card:hover{
+                transform:translateY(-6px);
+                box-shadow:0 0 18px rgba(76, 201, 240, 0.3);
+             }
+             .card img{
+                width:100%;
+                height:200px;
+                object-fit:cover;
+             }
+
+             .card-content{
+                padding:20px;
+                flex-grow:1;
+             }
+             .card-content h2{
+                color:#999;
+                font-size:1.0rem;
+             }
+
+
+             /*navbar (hamburger)*/
+             @media(max-width:768px){
+                .hamburger{
+                    display:flex;
+                }
+                .nav-links{
+                    width:100%;
+                    flex-direction:column;
+                    align-items:center;
+                    background:rgba(20, 20, 20, 0.97);
+                    max-height:0;
+                    overflow:hidden;
+                }
+
+                .nav-links.active{
+                    max-height:200px;
+                    padding:10px 0;
+                }
+             }
+
+             /*adjusting screensize on mobile*/
+             @media(max-width:480px){
+                .main h1{
+                    font-size:2rem;
+                }
+                .main p{
+                    font-size:1rem;
+                }
+             }
+             footer{
+                text-align:center;
+                padding:20px;
+                color:#aaa;
+                background-color:#111;
+                border-top:1px solid #222;
+
+             }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">AI Revolution</div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Trends</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--main section-->
+        <section class="main">
+            <h1>The AI Revolution in Everyday Life</h1>
+            <p>Every tap, scroll and voice command, AI is there, learning and evolving. It's no longer the future, it's already part of our everyday life.</p>
+        </section>
+
+        <!--cards-->
+        <section class="card-section">
+            <div class="card">
+                <img src="https://businesswest.com/wp-content/uploads/2024/08/WorkplaceAI.jpg" alt="AI at work">
+                <div class="card-content">
+                    <h2>Smarter Workplaces</h2>
+                    <p>Artificial Intelligence is transforming modern workplaces by taking over repetitive tasks, analyzing information faster than humans ever could, and supporting teams in making better decisions. From virtual meeting notes to predictive analytics, AI is becoming a trusted co-worker — one that helps people work smarter, not harder.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn.prod.website-files.com/66b0cda3e7741c9e30dc1934/66f56af797e1fdf980dffbbb_01.PNG" alt="AI-Assistants">
+                <div class="card-content">
+                    <h2>Personal Assistant</h2>
+                    <p> Voice-powered assistants like Alexa, Siri, and Google Assistant have quickly become part of our everyday routine. 
+                    They help us set reminders, play music, control smart devices, and even answer random questions on the spot. With every update, these AIs are getting more personal — learning our habits and making technology feel a little more human.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://acko-cms.ackoassets.com/what_are_self_driving_cars_5cc91378cd.png" alt="Self-driving cars">
+                <div class="card-content">
+                    <h2>Self-driving cars</h2>
+                    <p>Self-driving cars use AI to sense their surroundings, read traffic signs, and make split-second driving decisions all without human control.They’re designed to reduce accidents, save time, and change the way cities move.While still evolving, this technology shows how AI is steering us toward a safer and smarter future on the road.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 The AI Revolution</p>
+        </footer>
+
+        <script>
+            function toggleMenu(){
+                document.getElementById('menu').classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
